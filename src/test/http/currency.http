@@ -1,0 +1,49 @@
+### get coinDesk API DataSource
+POST http://localhost:9100/getCoinDeskData
+Content-Type: application/json
+
+### createCurrency
+POST http://localhost:9100/saveOrUpdateCurrency
+Content-Type: application/json
+
+{
+  "id": "",
+  "updatedIso": "2022-01-17T13:42:00+00:00",
+  "disclaimer": "測試新增TWD硬幣",
+  "chartName": "Bitcoin",
+  "bpi": {
+    "code": "TWD",
+    "symbol": "TWD硬幣",
+    "rate": "123.4",
+    "description": "測試TWD硬幣",
+    "rateFloat": 123.4
+  }
+}
+
+### updateCurrency
+POST http://localhost:9100/saveOrUpdateCurrency
+Content-Type: application/json
+
+{
+  "id": "6168014c-3132-4de5-98ee-d727c9c13194",
+  "updatedIso": "2022-01-17T13:42:00+00:00",
+  "disclaimer": "測試新增",
+  "chartName": "elliot",
+  "bpi": {
+    "id": "b9c69165-346c-46d2-a22b-93349c648a32",
+    "code": "USD",
+    "symbol": "elliot硬幣",
+    "rate": "123.4",
+    "description": "測試elliot硬幣",
+    "rateFloat": 123.4
+  }
+}
+
+### deleteCurrency
+DELETE http://localhost:9100/deleteCurrency/596bfcba-8396-430f-bce7-f36169a2ce
+Content-Type: application/json
+
+### findCurrency
+POST http://localhost:9100/findCurrency/Bitcoin
+Content-Type: application/json
+
